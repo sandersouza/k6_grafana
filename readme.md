@@ -22,11 +22,12 @@ Certifique-se de que todos os arquivos de configuração estão no diretório co
 Arquivo .env
 ---
 Configure as variáveis de ambiente necessárias no arquivo .env na raiz do projeto:
-
+```
 INFLUXDB_ADMIN_USER=admin
 INFLUXDB_ADMIN_PASSWORD=password
 GRAFANA_ADMIN_USER=admin
 GRAFANA_ADMIN_PASSWORD=senha123
+```
 
 Iniciando o Ambiente
 ---
