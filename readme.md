@@ -6,11 +6,11 @@ Pré-requisitos
 - Docker
 - Docker Compose
 
-Configuração
----
 Clone o Repositório
 ---
+```
 $ git clone <URL_DO_REPOSITORIO>
+````
 
 Arquivos de Configuração
 ---
@@ -32,14 +32,16 @@ GRAFANA_ADMIN_PASSWORD=senha123
 Iniciando o Ambiente
 ---
 Execute o seguinte comando no diretório do projeto para iniciar todos os serviços:
+```
 $ docker-compose up
+````
 
 Após os serviços estarem rodando, você pode acessar o Grafana em http://localhost:3000 e o InfluxDB em http://localhost:8086.
 
 Executando Testes com K6
 ---
 Crie um arquivo chamado test_script.js no diretório ./scripts com o seguinte conteúdo:
-
+```
 javascript
 Copy code
 import http from 'k6/http';
@@ -55,11 +57,13 @@ export default function () {
     http.get('http://test.k6.io');
     sleep(1);
 }
-
+```
 Executando o Script
 ---
 Para executar o script K6, use o seguinte comando:
+```
 $ docker-compose run k6 run /scripts/test_script.js
+````
 
 Monitoramento com Grafana
 ---
