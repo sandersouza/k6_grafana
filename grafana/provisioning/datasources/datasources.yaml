@@ -1,0 +1,13 @@
+apiVersion: 1
+
+datasources:
+- name: InfluxDB
+  type: influxdb
+  access: proxy
+  orgId: 1
+  url: http://influxdb:8086
+  user: 'admin'
+  password: 'senha123'
+  database: 'k6_result'
+  isDefault: true
+  editable: true
