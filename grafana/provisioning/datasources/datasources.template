@@ -6,8 +6,9 @@ datasources:
   access: proxy
   orgId: 1
   url: http://influxdb:8086
-  user: '${INFLUXDB_ADMIN_USER}'
-  password: '${INFLUXDB_ADMIN_PASSWORD}'
   database: 'k6_result'
+  user: '${INFLUXDB_ADMIN_USER}'
+  secureJsonData:
+    password: '${INFLUXDB_ADMIN_PASSWORD}'
   isDefault: true
   editable: true

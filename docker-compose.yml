@@ -41,5 +41,4 @@ services:
     volumes:
       - ./scripts:/scripts
     entrypoint: ["k6"]
-    command: ["run", "/scripts/example.js", "--out", "influxdb=http://influxdb:8086/k6_result"]
-
+    command: ["run", "/scripts/example.js", "--out", "influxdb=http://${INFLUXDB_ADMIN_USER}:${INFLUXDB_ADMIN_PASSWORD}@influxdb:8086/k6_result"]
