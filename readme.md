@@ -1,4 +1,4 @@
-Setup de Testes de Performance com K6, Grafana e InfluxDB
+Setup de Testes de Performance com K6, Grafana e Prometheus
 ---
 Este guia passo a passo mostra como configurar e usar um ambiente Dockerizado para testes de performance com K6, Grafana e InfluxDB.
 
