@@ -1,6 +1,6 @@
 Setup de Testes de Performance com K6, Grafana e Prometheus
 ---
-Este guia passo a passo mostra como configurar e usar um ambiente Dockerizado para testes de performance com K6, Grafana e InfluxDB.
+Este guia passo a passo mostra como configurar e usar um ambiente Dockerizado para testes de performance com K6, Grafana e **Prometheus**.
 
 Pré-requisitos
 - Docker
@@ -21,10 +21,8 @@ Certifique-se de que todos os arquivos de configuração estão no diretório co
 
 Arquivo .env
 ---
-Configure as variáveis de ambiente necessárias no arquivo .env na raiz do projeto:
+Copie o arquivo `.env.example` para `.env` e ajuste as credenciais desejadas:
 ```
-INFLUXDB_ADMIN_USER=admin
-INFLUXDB_ADMIN_PASSWORD=password
 GRAFANA_ADMIN_USER=admin
 GRAFANA_ADMIN_PASSWORD=senha123
 ```
@@ -36,7 +34,7 @@ Execute o seguinte comando no diretório do projeto para iniciar todos os servi�
 $ docker-compose up
 ````
 
-Após os serviços estarem rodando, você pode acessar o Grafana em http://localhost:3000 e o InfluxDB em http://localhost:8086.
+Após os serviços estarem rodando, você pode acessar o Grafana em http://localhost:3000 e o Prometheus em http://localhost:9090.
 
 Executando Testes com K6
 ---
@@ -73,4 +71,7 @@ Use o usuário e senha definidos no arquivo .env.
 Visualizar Dashboards
 ---
 Navegue pelos dashboards disponíveis para monitorar os resultados dos testes de performance.
+
 Conclusão
+---
+Com esse setup você poderá executar e acompanhar testes de carga de forma simples utilizando o K6 integrado ao Prometheus e Grafana.
